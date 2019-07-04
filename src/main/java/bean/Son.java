@@ -2,11 +2,15 @@ package bean;
 
 public class Son extends Father {
 
-    @Override
-    protected void test() {
-     System.out.println("i' m son");
+    protected void eat() {
     }
-    public static void main(String[] args){
 
+    protected void test() {
+        System.out.println("i' m son");
+    }
+
+    public static void main(String[] args) {
+
+        new Son().eat();
     }
 }

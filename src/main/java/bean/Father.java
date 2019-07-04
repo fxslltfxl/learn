@@ -6,6 +6,9 @@ public abstract class Father {
     }
 
     protected abstract void test();
+    protected void eat(){
+        System.out.println("Father");
+    }
 
 
 
