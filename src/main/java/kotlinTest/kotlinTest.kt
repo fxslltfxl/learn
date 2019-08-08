@@ -1,5 +1,11 @@
 package kotlinTest
 
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
+import kotlin.jvm.internal.Ref
+
 class kotlinTest {
 
     companion object {
@@ -10,6 +16,20 @@ class kotlinTest {
 
         @JvmStatic
         private fun test() {
+
+
+            val intRef = Ref.IntRef()
+
+            intRef.element = 1000
+
+//          coroutine 
+            GlobalScope.launch {
+
+            }
+
+            runBlocking {
+                delay(2000L)
+            }
 
             out@ for (out in 1..5) {
                 for ((index, value) in intArray.withIndex()) {
@@ -24,6 +44,7 @@ class kotlinTest {
     val sum = fun Int.(x: Int, y: Int): Int = this + x + y
 
 
+    fun testRunblocking() =  runBlocking {
 
-
+    }
 }
