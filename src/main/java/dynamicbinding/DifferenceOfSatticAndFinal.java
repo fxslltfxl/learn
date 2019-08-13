@@ -49,7 +49,7 @@ public class DifferenceOfSatticAndFinal {
 //        sub1.finalMethod();
 //        sub1.sta();
 
-        // TODO 为什么会调用子类的方法？
+        // 为什么会调用子类的方法？
         Super sup = new Super();
         System.out.println("-----------");
         Super sub  = new Sub();

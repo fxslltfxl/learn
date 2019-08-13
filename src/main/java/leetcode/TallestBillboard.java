@@ -13,7 +13,7 @@ public class TallestBillboard {
      * Return the largest possible height of your billboard installation.  If you cannot support the billboard, return 0
      */
 
-    //TODO  not mine submission
+    //  not mine submission
     static int NINF = Integer.MIN_VALUE / 3;
     static Integer[][] memo;
 

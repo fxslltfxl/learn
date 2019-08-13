@@ -10,6 +10,7 @@ public class MediumSolution {
         System.out.println(c);
     }
 
+    //TODO 还没有写完
     public int myAtoi(@NotNull String str) {
 
         long res = 0;

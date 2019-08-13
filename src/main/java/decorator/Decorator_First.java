@@ -14,7 +14,6 @@ public class Decorator_First extends Decorator {
 
     @Override
     public void say() {
-        //todo 必须调用的
         super.say();
         System.out.println("say decorator 1");
     }

@@ -21,10 +21,6 @@ public class Solution {
             curr.next = new ListNode(carry);
         }
         return null;
-
-
-        //TODO  this is first test_cherry_pick change
-        //TODO  this is second test_cherry_pick change
     }
 
 

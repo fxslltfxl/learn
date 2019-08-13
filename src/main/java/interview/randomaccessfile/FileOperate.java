@@ -36,7 +36,6 @@ public class FileOperate {
         } catch (FileNotFoundException e) {
             System.out.println("指定文件不存在");
         } catch (IOException e) {
-            // TODO: handle exception
         } finally {
             try {
                 // 关闭输入输出流
@@ -64,7 +63,6 @@ public class FileOperate {
             }
 
         } catch (InterruptedException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
 
@@ -80,11 +78,7 @@ public class FileOperate {
             while (readFile.read(buf) != -1) {
                 writeFile.write(buf);
             }
-        } catch (FileNotFoundException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
         } catch (IOException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
     }
