@@ -20,6 +20,7 @@ public class OkHttp3Util {
     private OkHttp3Util() {
     }
 
+    // 测试merge与rebase的区别（test'分支）
     public static OkHttpClient getInstance() {
         if (okHttpClient == null) {
             synchronized (OkHttp3Util.class) {
