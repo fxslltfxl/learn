@@ -80,6 +80,7 @@ public class OkHttp3Util {
         //得到Call对象
         Call call = okHttpClient.newCall(request);
         //执行异步请求
+
         call.enqueue(callback);
     }
 
