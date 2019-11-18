@@ -1,8 +1,10 @@
 package pattern.proxy;
 
+import java.io.IOException;
+
 public class DynamicProxyTest {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         //JDK DynamicProxy, need Implement Same interface
         ITest iTest = new Test();
         ProxyFactory<ITest> proxyFactory = new ProxyFactory<>(iTest);

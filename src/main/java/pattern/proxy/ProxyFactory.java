@@ -1,8 +1,10 @@
 package pattern.proxy;
 
+import java.io.IOException;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Parameter;
 import java.lang.reflect.Proxy;
+import java.net.Socket;
 
 public class ProxyFactory<T> {
 
@@ -13,7 +15,9 @@ public class ProxyFactory<T> {
         this.target = target;
     }
 
-    T getProxyInstance() {
+    T getProxyInstance() throws IOException {
+
+        Socket socket = new Socket("",1099);
 
         ClassLoader classLoader = target.getClass().getClassLoader();
 

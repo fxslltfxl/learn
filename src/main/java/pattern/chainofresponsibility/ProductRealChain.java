@@ -6,7 +6,7 @@ import java.util.List;
 
 public class ProductRealChain implements IChain {
 
-    List<Handler> handlers = new ArrayList<>();
+    private List<Handler> handlers;
 
     int index = 0;
 

@@ -1,16 +1,26 @@
 package bean;
 
-public abstract class Father {
-    public Father() {
-        test();
+public class Father {
+
+    String name;
+
+    public Father(String name) {
+        this.name = name;
     }
 
-    protected abstract void test();
-    protected void eat(){
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+
+
+    protected void eat() {
         System.out.println("Father");
     }
-
-
 
 
 }

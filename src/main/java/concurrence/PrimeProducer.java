@@ -1,5 +1,7 @@
 package concurrence;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ArrayBlockingQueue;
@@ -36,6 +38,11 @@ public class PrimeProducer extends Thread {
 
 
     private List<Runnable> drainQueue() {
+        return getRunnables();
+    }
+
+    @NotNull
+    public static List<Runnable> getRunnables() {
         BlockingQueue<Runnable> q = new ArrayBlockingQueue<>(100);
         ArrayList<Runnable> taskList = new ArrayList<>();
         q.drainTo(taskList);

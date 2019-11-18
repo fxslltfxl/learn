@@ -2,6 +2,10 @@ package bean;
 
 public class Son extends Father {
 
+    public Son(String name) {
+        super(name);
+    }
+
     protected void eat() {
     }
 
@@ -11,6 +15,5 @@ public class Son extends Father {
 
     public static void main(String[] args) {
 
-        new Son().eat();
     }
 }

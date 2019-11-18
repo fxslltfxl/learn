@@ -5,6 +5,8 @@ import java.util.List;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
 
+import static concurrence.PrimeProducer.getRunnables;
+
 public class PrimeProducer extends Thread {
 
     private final BlockingQueue blockingQueue;
@@ -36,15 +38,6 @@ public class PrimeProducer extends Thread {
 
 
     private List<Runnable> drainQueue() {
-        BlockingQueue<Runnable> q = new ArrayBlockingQueue<>(100);
-        ArrayList<Runnable> taskList = new ArrayList<>();
-        q.drainTo(taskList);
-        if (!q.isEmpty()) {
-            for (Runnable r : q.toArray(new Runnable[0])) {
-                if (q.remove(r))
-                    taskList.add(r);
-            }
-        }
-        return taskList;
+        return getRunnables();
     }
 }

@@ -6,7 +6,8 @@ plugins {
 group 'com.free'
 version '1.0-SNAPSHOT'
 
-
+task mytask {
+}
 
 repositories {
     mavenCentral()
@@ -17,7 +18,7 @@ dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.1.1"
-    
+
     implementation 'com.google.code.gson:gson:2.8.5'
     implementation("com.squareup.okhttp3:okhttp:3.12.1")
     //guava
@@ -26,7 +27,8 @@ dependencies {
     implementation 'io.netty:netty-all:4.1.31.Final'
 
     implementation 'com.squareup.retrofit2:retrofit:2.5.0'
-
+    implementation 'org.greenrobot:eventbus:3.1.1'
+    annotationProcessor 'org.greenrobot:eventbus-annotation-processor:3.1.1'
 }
 compileKotlin {
     kotlinOptions {

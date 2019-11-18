@@ -7,6 +7,7 @@ import java.util.Vector;
 public class AdapterTest {
 
 
+
     public static void main(String[] args) {
         Vector vector = new Vector();
         for (Enumeration enumeration = vector.elements(); enumeration.hasMoreElements(); ) {
@@ -18,4 +19,6 @@ public class AdapterTest {
         }
 
     }
+
+
 }

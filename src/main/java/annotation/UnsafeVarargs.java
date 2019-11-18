@@ -21,4 +21,9 @@ public class UnsafeVarargs {
             System.out.println(arg);
         }
     }
+
+    @Subscriber("testForSubscriber")
+    void testForSubscriber(){
+        System.out.println(this.getClass().getSimpleName());
+    }
 }
