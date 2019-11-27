@@ -1,4 +1,4 @@
-package arithmetic;
+package arithmetic.tree;
 
 public class ReConstructBinaryTree {
 

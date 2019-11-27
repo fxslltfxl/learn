@@ -1,4 +1,4 @@
-package interview.algorithm;
+package arithmetic.algorithm;
 
 public class solution {
     static int solution(int n) {

@@ -1,4 +1,4 @@
-package interview.algorithm;
+package arithmetic.algorithm;
 
 public class test {
     //TODO   这个题 不会做

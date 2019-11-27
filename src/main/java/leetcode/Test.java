@@ -22,4 +22,27 @@ public class Test {
         solution.addTwoNumbers(node1, node2);
 
     }
+
+    int[] arr = new int[100];
+
+    int index1 = 0;
+
+    int index2 = arr.length - 1;
+
+    public boolean push1(int i) {
+        if (index1 < 0 || index1 > arr.length - 1) {
+            return false;
+        }
+        if (index1 > index2) {
+            throw new RuntimeException("");
+        }
+        arr[index1] = i;
+        index1++;
+        return true;
+    }
+
+
+    public void push2() {
+
+    }
 }

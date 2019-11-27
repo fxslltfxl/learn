@@ -1,4 +1,4 @@
-package interview.algorithm;
+package arithmetic.algorithm;
 
 import java.util.Arrays;
 
