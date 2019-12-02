@@ -62,6 +62,10 @@ class MyProcessor : AbstractProcessor() {
         return false
     }
 }
+
+fun main() {
+
+}
 //                            _ooOoo_  
 //                           o8888888o  
 //                           88" . "88  

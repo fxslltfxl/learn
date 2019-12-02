@@ -2,7 +2,7 @@ package leetcode;
 
 /**
  * @Author fxs
- * @Description //TODO
+ * @Description //编程之美3.8：求二叉树中节点的最大距离
  * @Date 2019/11/27
  **/
 public class MaxDistanceForBinaryTreeNode {
@@ -10,14 +10,38 @@ public class MaxDistanceForBinaryTreeNode {
 
     public static void main(String[] args) {
 
+
+    }
+
+    static int height(Node root) {
+        if (root == null) {
+            return 0;
+        }
+        return Math.max(height(root.left), height(root.right)) + 1;
+    }
+
+    public static int maxDistanceForBinaryTreeNode(Node root) {
+        if (root == null) {
+            return 0;
+        }
+        int left = maxDistanceForBinaryTreeNode(root.left);
+        int right = maxDistanceForBinaryTreeNode(root.right);
+        int lHeight = height(root.left);
+        int rHeight = height(root.right);
+        int max = Math.max(left, right);
+        int i = lHeight + rHeight + 1 + 1 - 1 - 1;
+        return Math.max(max, i);
     }
 
 
-
-    class Node {
+    public class Node {
         int value;
         Node left;
         Node right;
+
+        public Node(int value) {
+            this.value = value;
+        }
     }
 }
 //写字楼里写字间，写字间里程序员；  
