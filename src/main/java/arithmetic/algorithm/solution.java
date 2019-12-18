@@ -27,6 +27,6 @@ public class solution {
     }
 
     public static void main(String[] args) {
-        System.out.println(solution(1000_000_000));
+        System.out.println(solution(1_000_000_000));
     }
 }

@@ -31,8 +31,8 @@ public class ApiTestBean {
         test.add(new ApiTestBean("1"));
         
         ApiTestBean apiTestBean = new ApiTestBean("1");
-        test.remove(apiTestBean);
-        System.out.println();
+        boolean remove = test.remove(apiTestBean);
+        System.out.println(remove);
 
     }
 }
