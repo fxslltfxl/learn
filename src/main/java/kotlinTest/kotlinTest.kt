@@ -1,9 +1,6 @@
 package kotlinTest
 
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.*
 import kotlin.jvm.internal.Ref
 
 class kotlinTest {
@@ -44,7 +41,38 @@ class kotlinTest {
     val sum = fun Int.(x: Int, y: Int): Int = this + x + y
 
 
-    fun testRunblocking() =  runBlocking {
+    fun testRunblocking() = runBlocking {
 
     }
+}
+
+fun main() {
+//    val startTime = System.currentTimeMillis()
+//    val job = launch(Dispatchers.Default) {
+//        var nextPrintTime = startTime
+//        var i = 0
+//        repeat (10) {
+//            // 一个执行计算的循环，只是为了占用 CPU
+//            // 每秒打印消息两次
+//            val currentTimeMillis = System.currentTimeMillis()
+//            println("$nextPrintTime  $currentTimeMillis")
+//            if (currentTimeMillis >= nextPrintTime) {
+//                println("job: I'm sleeping ${i++} ... $nextPrintTime  $currentTimeMillis")
+//                nextPrintTime += 50L
+//            }
+//        }
+//    }
+//    delay(1300L) // 等待一段时间
+//    println("main: I'm tired of waiting!")
+//    job.cancelAndJoin() // 取消一个作业并且等待它结束
+//    println("main: Now I can quit.")
+
+
+    val s = "http://106.55.13.150:29080/open-platform/sso?redirect_uri=wemeet://auth/sso?sso_auth_code=61990499f20c019699154421f7d55634&corp_id=1400321069"
+
+
+    java.net.URL(s)
+
+
+
 }

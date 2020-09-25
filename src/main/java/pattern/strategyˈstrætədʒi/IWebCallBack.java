@@ -1,4 +1,4 @@
-package pattern.strategy;
+package pattern.strategyˈstrætədʒi;
 
 public interface IWebCallBack {
     void onPageFinished();

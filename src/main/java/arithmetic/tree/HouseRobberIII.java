@@ -118,7 +118,7 @@ public class HouseRobberIII {
 
 
     /**
-     * 利用队列 层次遍历
+     * 利用队列 进行树层次遍历
      */
     @Deprecated
     static void levelTraversal() {

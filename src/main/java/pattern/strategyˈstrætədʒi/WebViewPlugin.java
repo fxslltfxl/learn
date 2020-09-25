@@ -1,4 +1,4 @@
-package pattern.strategy;
+package pattern.strategyˈstrætədʒi;
 
 /**
  * @Author fxs

@@ -7,8 +7,15 @@ group 'com.free'
 version '1.0-SNAPSHOT'
 
 repositories {
-    mavenCentral()
-    jcenter()
+    maven {
+        url "https://mirrors.tencent.com/nexus/repository/maven-public/"
+    }
+    maven {
+        url "http://maven.oa.com/nexus/content/groups/androidbuild"
+    }
+    maven {
+        url 'http://maven.oa.com/nexus/content/repositories/thirdparty'
+    }
 }
 
 sourceSets{
@@ -18,14 +25,6 @@ sourceSets{
         }
         resources {
             srcDir 'src/resources' //资源目录
-        }
-    }
-    test{
-        java {
-            srcDir 'test/java' // 指定源码目录
-        }
-        resources {
-            srcDir 'test/resources' //资源目录
         }
     }
 }
@@ -39,7 +38,7 @@ dependencies {
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.1.1"
 
     implementation 'com.google.code.gson:gson:2.8.5'
-    implementation("com.squareup.okhttp3:okhttp:3.12.1")
+    implementation("com.squareup.okhttp3:okhttp:4.2.2")
     //guava
     implementation 'com.google.guava:guava:26.0-jre'
 

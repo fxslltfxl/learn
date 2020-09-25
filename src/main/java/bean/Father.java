@@ -17,10 +17,12 @@ public class Father {
     }
 
 
-
     protected void eat() {
         System.out.println("Father");
     }
 
+    protected Object testLSP(Number number) {
+        return number.toString();
+    }
 
 }

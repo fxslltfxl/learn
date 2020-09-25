@@ -1,5 +1,9 @@
 package arithmetic.tree;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
 /**
  * @Author fxs
  * @Description 求二叉树中节点的最大距离
@@ -27,24 +31,27 @@ public class MaxDistance {
         int MaxRight;
     }
 
-    void maxDistance(TreeNode root){
-        if (root==null){
+    void maxDistance(TreeNode root) {
+
+
+
+        if (root == null) {
             return;
         }
-        if (root.left==null){
+        if (root.left == null) {
             root.MaxLeft = 0;
         }
-        if (root.right==null){
-            root.MaxRight =0;
+        if (root.right == null) {
+            root.MaxRight = 0;
         }
-        if (root.left!=null){
+        if (root.left != null) {
             maxDistance(root.left);
         }
-        if (root.right!=null){
+        if (root.right != null) {
             maxDistance(root.right);
         }
 
-        if (root.left!=null){
+        if (root.left != null) {
 //            root.left.MaxLeft
         }
     }
