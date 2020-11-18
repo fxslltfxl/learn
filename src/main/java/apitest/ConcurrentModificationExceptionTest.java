@@ -3,7 +3,6 @@ package apitest;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-import java.util.concurrent.CopyOnWriteArrayList;
 
 /**
  * @Author fxs
@@ -12,7 +11,15 @@ import java.util.concurrent.CopyOnWriteArrayList;
  **/
 public class ConcurrentModificationExceptionTest {
     public static void main(String[] args) {
-        List<String> userNames = new CopyOnWriteArrayList<String>() {{
+//      CopyOnWriteArrayList  不会发生ConcurrentModificationException
+//        List<String> userNames = new CopyOnWriteArrayList<>() {{
+//            add("Hollis");
+//            add("hollis");
+//            add("HollisChuang");
+//            add("H");
+//        }};
+//      ArrayList  发生ConcurrentModificationException
+        List<String> userNames = new ArrayList<>() {{
             add("Hollis");
             add("hollis");
             add("HollisChuang");
@@ -20,24 +27,23 @@ public class ConcurrentModificationExceptionTest {
         }};
 
         Iterator it = userNames.iterator();
-
-        for (String userName : userNames) {
-            if (userName.equals("Hollis")) {
-                userNames.remove(userName);
+//      throw ConcurrentModificationException
+//        for (String userName : userNames) {
+//            if (userName.equals("Hollis")) {
+//                userNames.remove(userName);
+//            }
+//        }
+//      normal  for CopyOnWriteArrayList and ArrayList
+        while (it.hasNext()) {
+            if (it.next().equals("Hollis")) {
+                it.remove();
             }
         }
-
         System.out.println(userNames);
-
-        while(it.hasNext()){
+        while (it.hasNext()) {
             System.out.println(it.next());
         }
-
     }
-
-
-
-
 }
 //写字楼里写字间，写字间里程序员；  
 //程序人员写程序，又拿程序换酒钱。  

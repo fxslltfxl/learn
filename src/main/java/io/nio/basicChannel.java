@@ -1,7 +1,5 @@
 package io.nio;
 
-import org.greenrobot.eventbus.EventBus;
-
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.RandomAccessFile;
@@ -20,7 +18,7 @@ public class basicChannel {
 
         try (FileInputStream fileInputStream = new FileInputStream("/Users/fxs/IdeaProjects/learn/src/main/java/io/nio/test");
              FileOutputStream fileOutputStream = new FileOutputStream("/Users/fxs/IdeaProjects/learn/src/main/java/io/nio/test")
-        ){
+        ) {
 
         }
 
@@ -54,20 +52,18 @@ public class basicChannel {
         channel.close();
         file.close();
 
-        try (Scanner scanner = new Scanner(System.in);){
+        try (Scanner scanner = new Scanner(System.in);) {
             while (true) {
                 String s = scanner.nextLine();
-                System.out.print(s+"\n");
+                System.out.print(s + "\n");
             }
 
         }
 
 
-
-
     }
 
-    protected void protectedMethod(){
+    protected void protectedMethod() {
 
     }
 }
