@@ -6,10 +6,14 @@ import java.util.List;
 
 /**
  * @Author fxs
- * @Description //TODO
+ * @Description level traversal of tree
  * @Date 2019/12/24
  **/
 public class LevelTraversal {
+    /**
+     * The level of the tree
+     * same as {@link #levelOrder(TreeNode).size()}
+     */
     private static int level;
 
     public static class TreeNode {
@@ -37,10 +41,10 @@ public class LevelTraversal {
          */
         list.addLast(root);
         list.addLast(null);
-        ArrayList<Integer> inner = new ArrayList<>();
-        inner.add(root.val);
-        ArrayList<List<Integer>> res = new ArrayList<>();
-        res.add(inner);
+        ArrayList<Integer> levelItems = new ArrayList<>();
+        levelItems.add(root.val);
+        ArrayList<List<Integer>> levels = new ArrayList<>();
+        levels.add(levelItems);
         while (!list.isEmpty()) {
             TreeNode treeNode = list.removeFirst();
             if (treeNode != null) {
@@ -53,28 +57,20 @@ public class LevelTraversal {
             } else {
                 if (list.isEmpty()) break;
                 list.addLast(null);
-                inner = new ArrayList<>();
+                levelItems = new ArrayList<>();
                 for (TreeNode node : list) {
                     if (node != null) {
                         int val = node.val;
                         //level 为0时，队列中存入的 其实的第二层（根节点已经出队列了）
-                        inner.add(val);
+                        levelItems.add(val);
                     }
                 }
-                res.add(inner);
+                levels.add(levelItems);
                 level++;
             }
         }
-        return res;
+        return levels;
     }
 
 
 }
-//写字楼里写字间，写字间里程序员；  
-//程序人员写程序，又拿程序换酒钱。  
-//酒醒只在网上坐，酒醉还来网下眠；  
-//酒醉酒醒日复日，网上网下年复年。  
-//但愿老死电脑间，不愿鞠躬老板前；  
-//奔驰宝马贵者趣，公交自行程序员。  
-//别人笑我忒疯癫，我笑自己命太贱；  
-//不见满街漂亮妹，哪个归得程序员？ 

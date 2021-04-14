@@ -8,6 +8,9 @@ fun main() {
     println("1111")
 }
 
+object TTTT {
+    val test:String = ""
+}
 
 inline fun hello(crossinline test:()->Unit) {
     println("111")

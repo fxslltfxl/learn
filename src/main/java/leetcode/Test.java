@@ -10,16 +10,16 @@ public class Test {
 //        for (int i : ints1) {
 //            System.out.println(i);
 //        }
-        Solution solution = new Solution();
-        Solution.ListNode node1 = solution.new ListNode(3);
-        node1.next = solution.new ListNode(4);
-        node1.next.next = solution.new ListNode(2);
+        AddTwoNumbers addTwoNumbers = new AddTwoNumbers();
+        AddTwoNumbers.ListNode node1 = addTwoNumbers.new ListNode(3);
+        node1.next = addTwoNumbers.new ListNode(4);
+        node1.next.next = addTwoNumbers.new ListNode(2);
 
-        Solution.ListNode node2 = solution.new ListNode(4);
-        node2.next = solution.new ListNode(6);
-        node2.next.next = solution.new ListNode(5);
+        AddTwoNumbers.ListNode node2 = addTwoNumbers.new ListNode(4);
+        node2.next = addTwoNumbers.new ListNode(6);
+        node2.next.next = addTwoNumbers.new ListNode(5);
 
-        solution.addTwoNumbers(node1, node2);
+        addTwoNumbers.addTwoNumbers(node1, node2);
 
     }
 
