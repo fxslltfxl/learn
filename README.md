@@ -16,3 +16,12 @@ fragment     | 12.12 14:00 |      fail        |               |
 
 
 
+
+
+
+
+
+LEETCODE      | BEGIN TIME  |COMPLETE TIME | USAGE TIME  | DEGREE OF DIFFCULTY
+:----------- | :-----------:| :-----------:| :-----------: | :-----------: 
+    MS       |    21.09.10          |      21.09.11        |         1d   | middle
+    QS       |    21.09.10          |      21.09.13        |         2d   | middle
