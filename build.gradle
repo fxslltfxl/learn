@@ -1,6 +1,14 @@
 plugins {
     id 'java'
-    id 'org.jetbrains.kotlin.jvm' version '1.5.30'
+    id 'org.jetbrains.kotlin.jvm' version '1.6.20'
+}
+
+apply plugin: 'idea'
+idea {
+    module {
+        downloadJavadoc = true
+        downloadSources = true
+    }
 }
 
 group 'com.free'
@@ -21,14 +29,15 @@ repositories {
 sourceSets{
     main {
         java {
-            srcDir 'src/java' // 指定源码目录
+            srcDir 'src/java' // 指定源码目
         }
     }
 }
 
 dependencies {
     testImplementation group: 'junit', name: 'junit', version: '4.12'
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.5.30"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.6.20"
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.3'
     implementation "org.jetbrains.kotlin:kotlin-reflect"
     testImplementation "org.jetbrains.kotlin:kotlin-test"
     testImplementation "org.jetbrains.kotlin:kotlin-test-junit"
@@ -43,5 +52,7 @@ dependencies {
 
     implementation 'com.squareup.retrofit2:retrofit:2.5.0'
     implementation 'org.greenrobot:eventbus:3.1.1'
+    // https://mvnrepository.com/artifact/com.tencent/mmkv
+    implementation 'com.tencent:mmkv:1.2.1'
     annotationProcessor 'org.greenrobot:eventbus-annotation-processor:3.1.1'
 }

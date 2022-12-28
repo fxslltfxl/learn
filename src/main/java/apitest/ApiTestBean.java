@@ -3,6 +3,7 @@ package apitest;
 import okhttp3.OkHttpClient;
 
 import java.util.ArrayList;
+import java.util.Base64;
 import java.util.List;
 
 public class ApiTestBean {

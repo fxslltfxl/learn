@@ -25,4 +25,11 @@ public class Father {
         return number.toString();
     }
 
+    public static void main(String[] args) {
+        ThreadLocal<String> aaa = new ThreadLocal<>();
+        aaa.set("11111");
+    }
 }
+
+
+
